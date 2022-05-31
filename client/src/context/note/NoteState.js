@@ -10,7 +10,7 @@ const CourseState = (props) => {
   //Get all notes
   const getNote = async(auth) => {
     // console.log("Getting tjhe notes");
-    const response = await fetch(`${host}/api/notes/fetchallnotes`, {
+    const response = await fetch(`${host}/api/notes/fetchallnotes/collaborateurs`, {
       method: 'GET',               
       headers: {
         'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ const CourseState = (props) => {
   // Add a Note
   const addNote = async (title, description) => {
     // console.log('Adding note');
-    const response = await fetch(`${host}/api/notes/insertdata`, {
+    const response = await fetch(`${host}/api/notes/insertdata/collaborateurs`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ const CourseState = (props) => {
   //Delete a Note
   const deleteNote =async (id) => {
     // console.log('delete using context api id ' + id);
-    const response = await fetch(`${host}/api/notes/deletenotes/${id}`, {
+    const response = await fetch(`${host}/api/notes/deletenotes/${id}/collaborateurs`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
