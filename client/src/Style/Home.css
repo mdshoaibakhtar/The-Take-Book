@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container h1 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    /* background: #000; */
+    color: rgb(0, 0, 0);
+    padding: 3rem 0;
+}
+
+.title {
+    margin-top: 0.5rem;
+    height: 2.6rem;
+    padding: 0 0.5rem;
+    font-size: 1.4rem;
+}
+
+.ntitle {
+    height: 2.3rem;
+    font-size: 1.3rem;
+    padding: 0 0.3rem;
+    border-radius: 0.4rem 0.4rem;
+    text-transform: capitalize;
+    border: none;
+    color: rgb(0, 0, 0);
+    background: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+/* .container input{
+    border: 2px solid black;
+} */
+.container button {
+    /* border: 2px solid black; */
+    height: 2.5rem;
+    width: 12rem;
+    border-radius: 0.4rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    background: none;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+#note {
+    display: grid;
+    border-radius: 0.4rem 0.4rem;
+    height: 15rem;
+    width: 60rem;
+    resize: none;
+    margin: 2rem 0;
+    padding: 0.5rem 0.3rem;
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+   color: rgb(0, 0, 0);
+    text-transform: capitalize;
+}
+
+
+
+.note-container {
+    padding: 2rem 1rem;
+    /* background: rgb(0, 0, 0); */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: rgb(0, 0, 0);
+}
+
+
+.card {
+    border:1px solid red;
+    border:none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    width: 25rem;
+    text-transform: capitalize;
+    /* margin: 1rem; */
+    margin: 0.6rem 0.5rem;
+    justify-self: center;
+    height: 10rem;
+    padding: 0.3rem 0.4rem;
+    display: grid;
+    /* overflow:auto; */
+    /* overflow-wrap: break-word; */
+    grid-template-rows: 0.7fr 2fr 0.8fr;
+}
+
+.ctitle{
+    /* overflow-wrap: break-word; */
+    overflow: hidden;
+}
+
+.card h1{
+    /* color: red;
+    border: 1px solid red; */
+    display: flex;
+    overflow: hidden;
+    /* border: 1px solid white; */
+    width: 22rem;
+    /* overflow-wrap: break-word; */
+    /* white-space: initial; */
+}
+
+.card p {
+    font-size: 1.4rem;
+    /* overflow: scroll; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    
+
+}
+
+.card p::-webkit-scrollbar {
+    height: 4px;              /* height of horizontal scrollbar ← You're missing this */
+    width: 2px;    
+    background: #000;          /* width of vertical scrollbar */
+    /* border: 1px solid #d5d5d5; */
+  }
+.card-top{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    text-align: start;
+    /* overflow-wrap: break-word; */
+}
+.card-top .dlt{
+    /* border: 1px solid red; */
+    width: 3rem;
+    display: grid;
+    justify-self: end;
+}
+
+.card button {
+    width: 12rem;
+    /* margin: 0.5rem 0.9rem; */
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    color: rgb(0, 0, 0);
+    /* justify-content: end; */
+    margin: 0.2rem 0.5rem;
+    /* border: 2px,solid greenyellow; */
+}
+
+
+@media (max-width:1350px) {
+  
+.note-container {
+    padding: 2rem 1rem;
+    /* background: rgb(40, 40, 40); */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: rgb(0, 0, 0);
+}
+
+}
+@media (max-width:1350px) {
+  
+.ntitle{
+    width: 150vh;
+}
+#note{
+    width: 150vh;
+}
+
+}
+@media (max-width:895px) {
+  
+.ntitle{
+    width: 130vh;
+}
+#note{
+    width: 130vh;
+}
+
+.note-container {
+    padding: 2rem 1rem;
+    /* background: rgb(40, 40, 40); */
+    display: grid;
+    grid-template-columns: 1fr;
+    color: rgb(0, 0, 0);
+}
+.card{
+    width: 120vh;
+}
+}
+@media (max-width:766px) {
+  .container{
+      border: 1px solid red;
+  }
+.ntitle{
+    width: 100vh;
+    justify-self: center;
+}
+#note{
+    width: 100vh;
+    justify-self: center;
+}
+.saveBtn{
+    justify-self: center;
+}
+
+.note-container {
+    padding: 2rem 1rem;
+    /* background: rgb(40, 40, 40); */
+    display: grid;
+    grid-template-columns: 1fr;
+    color: rgb(0, 0, 0);
+}
+.card{
+    width: 100vh;
+}
+
+}
+
+@media (max-width:650px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .container h1{
+        font-size: 1.5rem;
+    }
+    .ntitle{
+        width: 80vh;
+    }
+    #note{
+        width: 80vh;
+    }
+    .card{
+        width: 75vh;
+        /* border: 1px solid red; */
+    }
+}
+
+@media (max-width:470px){
+
+    .container h1{
+        font-size: 1.2rem;
+    }
+    .ntitle{
+        width: 55vh;
+    }
+    #note{
+        width: 55vh;
+    }
+    .card{
+        width: 75vh;
+        justify-self: center;
+        border: 1px solid red;
+    }
+}
+
+
+@media (max-width:466px){
+
+    .container h1{
+        font-size: 1.2rem;
+    }
+    .ntitle{
+        width: 65vh;
+    }
+    #note{
+        width: 65vh;
+    }
+    .card{
+        width: 73vh;
+    }
+}
+
+@media (max-width:450px){
+    .container h1{
+        font-size: 1.2rem;
+    }
+    .ntitle{
+        width: 50vh;
+    }
+    #note{
+        width: 50vh;
+    }
+    .card{
+        width: 65vh;
+    }
+    .card h1{
+        /* color: red;
+        border: 1px solid red; */
+        display: flex;
+        overflow: hidden;
+        /* border: 1px solid white; */
+        width: 18rem;
+        /* overflow-wrap: break-word; */
+        /* white-space: initial; */
+    }
+}
+
+@media (max-width:400px){
+    .container h1{
+        font-size: 1.2rem;
+    }
+    .ntitle{
+        width: 50vh;
+    }
+    #note{
+        width: 50vh;
+    }
+    .card{
+        width: 55vh;
+    }
+    .card h1{
+        /* color: red;
+        border: 1px solid red; */
+        display: flex;
+        overflow: hidden;
+        /* border: 1px solid white; */
+        width: 15rem;
+        /* overflow-wrap: break-word; */
+        /* white-space: initial; */
+    }
+}

@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-style: italic; */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.logIn-container{
+    /* border: 2px solid red; */
+    display: grid;
+    justify-content: center;
+    margin: 0.5rem;
+}
+.logIn-container input{
+    border:none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    height: 2rem;
+    width: 16rem;
+    padding: 0.1rem 0.3rem;
+    font-size: 1.3rem ;
+}
+.logIn-container input:hio{
+    border:none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    height: 2rem;
+    width: 16rem;
+    padding: 0.1rem 0.3rem;
+    font-size: 1.3rem ;
+}
+.logIn-container label{
+    font-size: 1.4rem;
+    margin: 0.3rem 0 -1rem 0;
+}
+.logIn-container button{
+    margin: 0.5rem 0;
+    height: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/*  SignUp */
+
+.signUp-container{
+    /* border: 2px solid red; */
+    display: grid;
+    justify-content: center;
+    margin: 0.5rem;
+}
+.signUp-container input{
+    border:none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    height: 2rem;
+    width: 25rem;
+    padding: 0.1rem 0.3rem;
+    font-size: 1.3rem ;
+}
+.signUp-container label{
+    font-size: 1.4rem;
+    margin: 0.3rem 0 -1rem 0;
+}
+.signUp-container button{
+    margin: 0.5rem 0;
+    height: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+@media (max-width:459px){
+    
+.signUp-container input{
+    border: 2px solid black;
+    height: 2rem;
+    width: 20rem;
+    padding: 0.1rem 0.3rem;
+    font-size: 1.3rem ;
+}
+.signUp-container label{
+    font-size: 1.4rem;
+    margin: 0.3rem 0 -1rem 0;
+}
+.signUp-container button{
+    margin: 0.5rem 0;
+    height: 2rem;
+}
+}
