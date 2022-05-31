@@ -9,7 +9,7 @@ export default function LogIn() {
 
     const handleLogin = async (e) => {
         console.log("Log In Clicked");
-        const response = await fetch('http://localhost:5000/api/auth/login', {
+        const response = await fetch('http://localhost:5000/api/auth/login/collaborateurs', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
