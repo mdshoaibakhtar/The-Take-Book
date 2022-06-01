@@ -79,7 +79,7 @@
 
 
 .card {
-    border:1px solid red;
+    /* border:1px solid red; */
     border:none;
     border-bottom: 1px solid rgb(0, 0, 0);
     width: 25rem;
@@ -197,7 +197,7 @@
 }
 @media (max-width:766px) {
   .container{
-      border: 1px solid red;
+      /* border: 1px solid red; */
   }
 .ntitle{
     width: 100vh;
@@ -254,7 +254,7 @@
         font-size: 1.2rem;
     }
     .ntitle{
-        width: 55vh;
+        width: 60vh;
     }
     #note{
         width: 55vh;
@@ -262,7 +262,7 @@
     .card{
         width: 75vh;
         justify-self: center;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 }
 
@@ -330,5 +330,54 @@
         width: 15rem;
         /* overflow-wrap: break-word; */
         /* white-space: initial; */
+    }
+}
+
+
+
+
+@media(max-height:745px){
+  #note{
+      width: 36rem;
+  }
+  .ntitle{
+      width: 36rem;
+  }
+  .card{
+      width: 25rem;
+  }
+}
+@media(max-height:745px){
+    @media(max-width:600px){
+        #note{
+            width: 26rem;
+        }
+        .ntitle{
+            width: 26rem;
+        }
+        .card{
+            width: 26rem;
+        }
+      }
+}
+@media(max-height:745px){
+    @media(max-width:508px){
+        #note{
+            width: 26rem;
+        }
+        .ntitle{
+            width: 26rem;
+        }
+        .card{
+            width: 22rem;
+        }
+        .card h1{
+            width: 18rem;
+        }
+      }
+}
+@media(max-height:1599px){
+    @media(max-width:1500px) {
+        
     }
 }
