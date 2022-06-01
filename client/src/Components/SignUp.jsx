@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../Style/Auth.css'
 
+const port =process.env.PORT || 5000;
 export default function SignUp() {
     const [signUp, setsignUp] = useState({ name: "", email: "", password: "" });
     let navigate = useNavigate();
@@ -9,7 +10,7 @@ export default function SignUp() {
         setsignUp({ ...signUp, [e.target.name]: e.target.value });
     }
     const handleSignup = async (e) => {
-        const response = await fetch('http://localhost:5000/api/auth/createuser/collaborateurs', {
+        const response = await fetch(`http://localhost:${port}/api/auth/createuser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

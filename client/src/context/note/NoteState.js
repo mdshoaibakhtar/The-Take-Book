@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import courseContext from './notesContext'
 
+const port =process.env.PORT || 5000;
 const CourseState = (props) => {
-  const host = "http://localhost:5000";
+
   const initial = [
   ]
   const [notes, setnotes] = useState(initial)
@@ -10,7 +11,7 @@ const CourseState = (props) => {
   //Get all notes
   const getNote = async(auth) => {
     // console.log("Getting tjhe notes");
-    const response = await fetch(`${host}/api/notes/fetchallnotes/collaborateurs`, {
+    const response = await fetch(`http://localhost:${port}/api/notes/fetchallnotes`, {
       method: 'GET',               
       headers: {
         'Content-Type': 'application/json',
@@ -27,7 +28,7 @@ const CourseState = (props) => {
   // Add a Note
   const addNote = async (title, description) => {
     // console.log('Adding note');
-    const response = await fetch(`${host}/api/notes/insertdata/collaborateurs`, {
+    const response = await fetch(`http://localhost:${port}/api/notes/insertdata`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -43,7 +44,7 @@ const CourseState = (props) => {
   //Delete a Note
   const deleteNote =async (id) => {
     // console.log('delete using context api id ' + id);
-    const response = await fetch(`${host}/api/notes/deletenotes/${id}/collaborateurs`, {
+    const response = await fetch(`http://localhost:${port}/api/notes/deletenotes/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
