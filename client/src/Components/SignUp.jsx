@@ -10,7 +10,7 @@ export default function SignUp() {
         setsignUp({ ...signUp, [e.target.name]: e.target.value });
     }
     const handleSignup = async (e) => {
-        const response = await fetch(`http://localhost:${port}/api/auth/createuser`, {
+        const response = await fetch(`http://localhost:5000/api/auth/createuser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

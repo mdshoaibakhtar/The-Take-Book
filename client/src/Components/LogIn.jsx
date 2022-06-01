@@ -2,7 +2,6 @@ import React, { useState,useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../Style/Auth.css'
 
-
 const port =process.env.PORT || 5000;
 export default function LogIn() {
     const [credential, setCredential] = useState({ email: "", password: "" })
@@ -10,7 +9,7 @@ export default function LogIn() {
 
     const handleLogin = async (e) => {
         console.log("Log In Clicked");
-        const response = await fetch(`http://localhost:${port}/api/auth/login`, {
+        const response = await fetch(`http://localhost:5000/api/auth/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
