@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../Style/Auth.css'
 
-const port =process.env.PORT || 80;
+const port =process.env.PORT || 5000;
 export default function LogIn() {
     const [credential, setCredential] = useState({ email: "", password: "" })
     let navigate = useNavigate();

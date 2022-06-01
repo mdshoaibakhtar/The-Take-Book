@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import courseContext from './notesContext'
 
-const port =process.env.PORT || 80;
+const port =process.env.PORT || 5000;
 const CourseState = (props) => {
 
   const initial = [
