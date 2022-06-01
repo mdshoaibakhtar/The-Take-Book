@@ -10,7 +10,7 @@ export default function SignUp() {
         setsignUp({ ...signUp, [e.target.name]: e.target.value });
     }
     const handleSignup = async (e) => {
-        const response = await fetch(`http://thetakebook.herokuapp.com/api/auth/createuser`, {
+        const response = await fetch(`https://thetakebook.herokuapp.com/api/auth/createuser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
