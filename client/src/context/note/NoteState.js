@@ -11,7 +11,7 @@ const CourseState = (props) => {
   //Get all notes
   const getNote = async(auth) => {
     // console.log("Getting tjhe notes");
-    const response = await fetch(`http://localhost:${port}/api/notes/fetchallnotes`, {
+    const response = await fetch(`http://thetakebook.herokuapp.com/api/notes/fetchallnotes`, {
       method: 'GET',               
       headers: {
         'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ const CourseState = (props) => {
   // Add a Note
   const addNote = async (title, description) => {
     // console.log('Adding note');
-    const response = await fetch(`http://localhost:${port}/api/notes/insertdata`, {
+    const response = await fetch(`http://thetakebook.herokuapp.com/api/notes/insertdata`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ const CourseState = (props) => {
   //Delete a Note
   const deleteNote =async (id) => {
     // console.log('delete using context api id ' + id);
-    const response = await fetch(`http://localhost:${port}/api/notes/deletenotes/${id}`, {
+    const response = await fetch(`http://thetakebook.herokuapp.com/api/notes/deletenotes/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
