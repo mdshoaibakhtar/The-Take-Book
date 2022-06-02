@@ -63,7 +63,7 @@
     border: none;
     background: none;
     border-bottom: 1px solid rgb(0, 0, 0);
-   color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     text-transform: capitalize;
 }
 
@@ -80,7 +80,7 @@
 
 .card {
     /* border:1px solid red; */
-    border:none;
+    border: none;
     border-bottom: 1px solid rgb(0, 0, 0);
     width: 25rem;
     text-transform: capitalize;
@@ -90,21 +90,44 @@
     height: 10rem;
     padding: 0.3rem 0.4rem;
     display: grid;
-    /* overflow:auto; */
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     /* overflow-wrap: break-word; */
     grid-template-rows: 0.7fr 2fr 0.8fr;
 }
-
-.ctitle{
-    /* overflow-wrap: break-word; */
-    overflow: hidden;
+.card::-webkit-scrollbar {
+    height: 1px;
+    /* height of horizontal scrollbar ← You're missing this */
+    width: 2px;
+    background: #000;
+    /* width of vertical scrollbar */
+    /* border: 1px solid #d5d5d5; */
 }
 
-.card h1{
+.ctitle {
+    overflow-wrap: break-word;
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 2rem;
+}
+.ctitle::-webkit-scrollbar {
+    height: 1px;
+    /* height of horizontal scrollbar ← You're missing this */
+    width: 2px;
+    background: #000;
+    /* width of vertical scrollbar */
+    /* border: 1px solid #d5d5d5; */
+}
+
+.card h1 {
     /* color: red;
     border: 1px solid red; */
     display: flex;
-    overflow: hidden;
+    /* overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden; */
     /* border: 1px solid white; */
     width: 22rem;
     /* overflow-wrap: break-word; */
@@ -114,26 +137,30 @@
 .card p {
     font-size: 1.4rem;
     /* overflow: scroll; */
-    overflow-x: hidden;
+    /* overflow-x: hidden;
     overflow-y: auto;
-    position: relative;
-    
+    position: relative; */
+
 
 }
 
 .card p::-webkit-scrollbar {
-    height: 4px;              /* height of horizontal scrollbar ← You're missing this */
-    width: 2px;    
-    background: #000;          /* width of vertical scrollbar */
+    height: 4px;
+    /* height of horizontal scrollbar ← You're missing this */
+    width: 2px;
+    background: #000;
+    /* width of vertical scrollbar */
     /* border: 1px solid #d5d5d5; */
-  }
-.card-top{
+}
+
+.card-top {
     display: grid;
     grid-template-columns: 1fr 0.5fr;
     text-align: start;
     /* overflow-wrap: break-word; */
 }
-.card-top .dlt{
+
+.card-top .dlt {
     /* border: 1px solid red; */
     width: 3rem;
     display: grid;
@@ -155,77 +182,87 @@
 
 
 @media (max-width:1350px) {
-  
-.note-container {
-    padding: 2rem 1rem;
-    /* background: rgb(40, 40, 40); */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    color: rgb(0, 0, 0);
-}
+
+    .note-container {
+        padding: 2rem 1rem;
+        /* background: rgb(40, 40, 40); */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: rgb(0, 0, 0);
+    }
 
 }
+
 @media (max-width:1350px) {
-  
-.ntitle{
-    width: 150vh;
-}
-#note{
-    width: 150vh;
-}
+
+    .ntitle {
+        width: 150vh;
+    }
+
+    #note {
+        width: 150vh;
+    }
 
 }
+
 @media (max-width:895px) {
-  
-.ntitle{
-    width: 130vh;
-}
-#note{
-    width: 130vh;
+
+    .ntitle {
+        width: 130vh;
+    }
+
+    #note {
+        width: 130vh;
+    }
+
+    .note-container {
+        padding: 2rem 1rem;
+        /* background: rgb(40, 40, 40); */
+        display: grid;
+        grid-template-columns: 1fr;
+        color: rgb(0, 0, 0);
+    }
+
+    .card {
+        width: 120vh;
+    }
 }
 
-.note-container {
-    padding: 2rem 1rem;
-    /* background: rgb(40, 40, 40); */
-    display: grid;
-    grid-template-columns: 1fr;
-    color: rgb(0, 0, 0);
-}
-.card{
-    width: 120vh;
-}
-}
 @media (max-width:766px) {
-  .container{
-      /* border: 1px solid red; */
-  }
-.ntitle{
-    width: 100vh;
-    justify-self: center;
-}
-#note{
-    width: 100vh;
-    justify-self: center;
-}
-.saveBtn{
-    justify-self: center;
+    .container {
+        /* border: 1px solid red; */
+    }
+
+    .ntitle {
+        width: 100vh;
+        justify-self: center;
+    }
+
+    #note {
+        width: 100vh;
+        justify-self: center;
+    }
+
+    .saveBtn {
+        justify-self: center;
+    }
+
+    .note-container {
+        padding: 2rem 1rem;
+        /* background: rgb(40, 40, 40); */
+        display: grid;
+        grid-template-columns: 1fr;
+        color: rgb(0, 0, 0);
+    }
+
+    .card {
+        width: 100vh;
+    }
+
 }
 
-.note-container {
-    padding: 2rem 1rem;
-    /* background: rgb(40, 40, 40); */
-    display: grid;
-    grid-template-columns: 1fr;
-    color: rgb(0, 0, 0);
-}
-.card{
-    width: 100vh;
-}
-
-}
-
-@media (max-width:650px){
-    .container{
+@media (max-width:650px) {
+    .container {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -233,33 +270,46 @@
         justify-content: center;
     }
 
-    .container h1{
+    .container h1 {
         font-size: 1.5rem;
     }
-    .ntitle{
-        width: 80vh;
+
+    .ntitle {
+        width: 27rem;
     }
-    #note{
-        width: 80vh;
+
+    #note {
+        width: 27rem;
     }
-    .card{
-        width: 75vh;
+
+    .card {
+        width: 25rem;
         /* border: 1px solid red; */
+    }
+    .card h1{
+    /* border: 1px solid red; */
+    width: 22rem;
+    }
+    .card .dlt{
+        color: rgb(0, 0, 0);
     }
 }
 
-@media (max-width:470px){
+@media (max-width:470px) {
 
-    .container h1{
+    .container h1 {
         font-size: 1.2rem;
     }
-    .ntitle{
+
+    .ntitle {
         width: 60vh;
     }
-    #note{
+
+    #note {
         width: 55vh;
     }
-    .card{
+
+    .card {
         width: 75vh;
         justify-self: center;
         /* border: 1px solid red; */
@@ -267,40 +317,47 @@
 }
 
 
-@media (max-width:466px){
+@media (max-width:466px) {
 
-    .container h1{
+    .container h1 {
         font-size: 1.2rem;
     }
-    .ntitle{
+
+    .ntitle {
         width: 65vh;
     }
-    #note{
+
+    #note {
         width: 65vh;
     }
-    .card{
-        width: 73vh;
+
+    .card {
+        width: 50vh;
     }
 }
 
-@media (max-width:450px){
-    .container h1{
+@media (max-width:450px) {
+    .container h1 {
         font-size: 1.2rem;
     }
-    .ntitle{
-        width: 50vh;
+
+    .ntitle {
+        width: 42vh;
     }
-    #note{
-        width: 50vh;
+
+    #note {
+        width: 42vh;
     }
-    .card{
-        width: 65vh;
+
+    .card {
+        width: 42vh;
     }
-    .card h1{
+
+    .card h1 {
         /* color: red;
         border: 1px solid red; */
         display: flex;
-        overflow: hidden;
+        /* overflow: hidden; */
         /* border: 1px solid white; */
         width: 18rem;
         /* overflow-wrap: break-word; */
@@ -308,26 +365,30 @@
     }
 }
 
-@media (max-width:400px){
-    .container h1{
+@media (max-width:400px) {
+    .container h1 {
         font-size: 1.2rem;
     }
-    .ntitle{
-        width: 50vh;
+
+    .ntitle {
+        width: 42vh;
     }
-    #note{
-        width: 50vh;
+
+    #note {
+        width: 42vh;
     }
-    .card{
-        width: 55vh;
+
+    .card {
+        width: 42vh;
     }
-    .card h1{
+
+    .card h1 {
         /* color: red;
         border: 1px solid red; */
         display: flex;
-        overflow: hidden;
+        /* overflow: hidden; */
         /* border: 1px solid white; */
-        width: 15rem;
+        width: 18rem;
         /* overflow-wrap: break-word; */
         /* white-space: initial; */
     }
@@ -336,48 +397,82 @@
 
 
 
-@media(max-height:745px){
-  #note{
-      width: 36rem;
-  }
-  .ntitle{
-      width: 36rem;
-  }
-  .card{
-      width: 25rem;
-  }
+@media(max-height:745px) {
+    #note {
+        width: 36rem;
+    }
+
+    .ntitle {
+        width: 36rem;
+    }
+
+    .card {
+        width: 25rem;
+    }
 }
-@media(max-height:745px){
-    @media(max-width:600px){
-        #note{
+
+@media(max-height:745px) {
+    @media(max-width:600px) {
+        #note {
             width: 26rem;
         }
-        .ntitle{
+
+        .ntitle {
             width: 26rem;
         }
-        .card{
+
+        .card {
             width: 26rem;
         }
-      }
+    }
 }
-@media(max-height:745px){
-    @media(max-width:508px){
-        #note{
+
+@media(max-height:745px) {
+    @media(max-width:508px) {
+        #note {
             width: 26rem;
         }
-        .ntitle{
+
+        .ntitle {
             width: 26rem;
         }
-        .card{
+
+        .card {
             width: 22rem;
+            /* background: #000; */
         }
-        .card h1{
+
+        .card h1 {
             width: 18rem;
         }
-      }
+    }
 }
-@media(max-height:1599px){
-    @media(max-width:1500px) {
-        
+
+@media(max-height:850px) {
+    @media(max-width:400px) {
+
+        .card {
+            background: rgb(200, 200, 200);
+            width: 20rem;
+        }
+
+        .ntitle {
+            width: 40vh;
+        }
+
+        #note {
+            width: 40vh;
+        }
+
+        .note-container {
+            padding: 2rem 0;
+        }
+
+        .card h1 {
+            width: 17rem;
+            /* overflow: scroll;
+            overflow-y: scroll;
+            overflow-x: hidden; */
+        }
     }
 }

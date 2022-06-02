@@ -16,12 +16,19 @@ export default function Home() {
         }
     }, [])
 
+    let str;
     const [note, setnote] = useState({ title: "", description: "" });
 
     const handleClick = (e) => {
         addNote(note.title, note.description);
         getNote();
         setnote({ title: "", description: "" })
+        if((note.title).length >10){
+            console.log('10se jyada hai');
+            str = note.title.slice(0,1);
+            console.log(str);
+
+        }
     }
     const handleChange = (e) => {
         setnote({ ...note, [e.target.name]: e.target.value })
