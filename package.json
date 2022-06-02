@@ -8,6 +8,10 @@
     "start": "node index.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
+  "engines": {
+    "npm": "8.5.0",
+    "node": "v16.14.2"
+},
   "author": "md shoaib akhtar",
   "license": "ISC",
   "dependencies": {
